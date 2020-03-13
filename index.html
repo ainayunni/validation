@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Validate Input</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form action="output.jsp">
+        <div class="row-first">
+            <h1>A. Student Details</h1>
+        </div>
+
+        <div id="completeForm">
+            <span class="msg">
+                You have successfully submitted the form :)
+                <button id="closeModal">OK</button>
+            </span>
+        </div>
+
+        <div class="row">
+            <div class="input-box">
+                <input type="text" id="fullname" name="fullname" placeholder="Name (Legal/Official)" onkeyup="validateFullName()"><label id="fullnameLabel"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-box">
+                <input type="text" id="matricno" placeholder="Matric No" onkeyup="validateMatricNo()"><label id="matricnoLabel"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-box">
+                <input type="text" id="currentaddress" placeholder="Current Address" onkeyup="validateCurrentAdd()"><label id="currentaddressLabel"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-box">
+                <input type="text" id="homeaddress" placeholder="Home Address" onkeyup="validateHomeAdd()"><label id="homeaddressLabel"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-box">
+                <input type="text" id="email" placeholder="Email (Gmail Account)" onkeyup="validateEmail()"><label id="emailLabel"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-box">
+                <input type="text" id="mobileno" placeholder="Mobile Phone No." onkeyup="validateMobileNo()"><label id="mobilenoLabel"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-box">
+                <input type="text" id="phoneno" placeholder="Home Phone No. (Emergency)" onkeyup="validatePhoneNo()"><label id="phonenoLabel"></label>
+            </div>
+        </div>
+
+        <div class="row-last">
+            <button id="submitButton">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

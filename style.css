@@ -1,0 +1,445 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Rubik:300,400,500,700";
+@import "https://fonts.googleapis.com/css?family=Lobster+Two:400,400i,700,700i";
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Rubik:300,400,500,700";
+@import "https://fonts.googleapis.com/css?family=Lobster+Two:400,400i,700,700i";
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: "Roboto", "Rubik", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.04em;
+    word-spacing: 0.2em;
+    text-decoration: none;
+    word-break: break-word;
+    text-rendering: optimizeLegibility;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    outline: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.row,
+.row-first,
+.row-last {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.row {
+    padding: 0.5em 1em;
+}
+
+.row-first {
+    padding: 1em 1em 0.5em 1em;
+}
+
+.row-last {
+    padding: 0.5em 1em 1em 1em;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.1rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: "Lobster Two", "Rubik", sans-serif;
+    font-weight: 700;
+    color: #2C3A47;
+    text-align: center;
+}
+
+.input-box {
+    width: 100%;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 0.75em 3em 0.75em 0.75em;
+    border: 0;
+    border-radius: 0.3em;
+    box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+.input-box .valid,
+.input-box .invalid {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.input-box .valid {
+    color: #6ab04c;
+}
+
+.input-box .invalid {
+    color: #eb3b5a;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #2C3A47;
+    border: 0;
+    padding: 0.75em;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0.3em;
+    transform: scale(1);
+    transition: transform 200ms;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.995);
+}
+
+.error {
+    animation: errorAnim 500ms ease-in-out forwards;
+}
+
+@keyframes errorAnim {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    15%,
+    45%,
+    75% {
+        transform: translateX(-0.25rem);
+    }
+    30%,
+    60% {
+        transform: translateX(0.25rem);
+    }
+}
+
+#completeForm {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform-origin: center center;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: transform 300ms ease-in-out, background-color 250ms 250ms ease-in-out, top 400ms ease-in-out;
+}
+
+#completeForm .msg {
+    display: block;
+    padding: 1em;
+    background-color: #fff;
+    margin: 0 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#completeForm ion-icon {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    background: linear-gradient(to right, #41b983, #3498db);
+    border-radius: 50%;
+    color: #fff;
+    margin: 0 auto 1rem;
+}
+
+#completeForm #closeModal {
+    display: block;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.progressbar {
+    height: 0.5rem;
+    width: 0;
+    border-radius: 0.1em;
+    background: linear-gradient(to right, #41b983, #3498db);
+    transition: width 400ms;
+}
+
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: "Roboto", "Rubik", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.04em;
+    word-spacing: 0.2em;
+    text-decoration: none;
+    word-break: break-word;
+    text-rendering: optimizeLegibility;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    outline: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.row,
+.row-first,
+.row-last {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.row {
+    padding: 0.5em 1em;
+}
+
+.row-first {
+    padding: 1em 1em 0.5em 1em;
+}
+
+.row-last {
+    padding: 0.5em 1em 1em 1em;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.1rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: "Lobster Two", "Rubik", sans-serif;
+    font-weight: 700;
+    color: #2C3A47;
+    text-align: center;
+}
+
+.input-box {
+    width: 100%;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 0.75em 3em 0.75em 0.75em;
+    border: 0;
+    border-radius: 0.3em;
+    box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+.input-box .valid,
+.input-box .invalid {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.input-box .valid {
+    color: #6ab04c;
+}
+
+.input-box .invalid {
+    color: #eb3b5a;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #2C3A47;
+    border: 0;
+    padding: 0.75em;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 0.3em;
+    transform: scale(1);
+    transition: transform 200ms;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.995);
+}
+
+.error {
+    animation: errorAnim 500ms ease-in-out forwards;
+}
+
+@keyframes errorAnim {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    15%,
+    45%,
+    75% {
+        transform: translateX(-0.25rem);
+    }
+    30%,
+    60% {
+        transform: translateX(0.25rem);
+    }
+}
+
+#completeForm {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform-origin: center center;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: transform 300ms ease-in-out, background-color 250ms 250ms ease-in-out, top 400ms ease-in-out;
+}
+
+#completeForm .msg {
+    display: block;
+    padding: 1em;
+    background-color: #fff;
+    margin: 0 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#completeForm ion-icon {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+    background: linear-gradient(to right, #41b983, #3498db);
+    border-radius: 50%;
+    color: #fff;
+    margin: 0 auto 1rem;
+}
+
+#completeForm #closeModal {
+    display: block;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.progressbar {
+    height: 0.5rem;
+    width: 0;
+    border-radius: 0.1em;
+    background: linear-gradient(to right, #41b983, #3498db);
+    transition: width 400ms;
+}
